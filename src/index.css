@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  @apply bg-slate-500;
+}
