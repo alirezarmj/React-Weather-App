@@ -8,11 +8,15 @@ export const getFormatedDate = () => {
     minute: "2-digit",
   });
 };
-export const getShortDate = (timestap: number) => {
-  const date = new Date(timestap);
+
+export const getShortDate = (timestamp: number) => {
+  const date = new Date(timestamp * 1000); // convert timestamp to milliseconds
+
   return date.toLocaleString("en-US", {
     day: "numeric",
     month: "short",
     hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
   });
 };

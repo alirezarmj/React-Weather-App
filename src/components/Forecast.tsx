@@ -8,7 +8,6 @@ const Forecast = ({ forecastWeather }: { forecastWeather: any }) => {
       <h1 className="text-lg font-bold mb-4 text-center"> Forecast </h1>
       <div className="flex flex-wrap gap-2">
         {forecastWeather.list.slice(0, 5).map((forecastItem: ForeCastItem, index: number) => {
-          console.log("forecastItem: ", forecastItem);
           const { dt, weather, main, wind } = forecastItem;
           return (
             <div key={index} className="p-2  rounded-lg  shadow-md ">
